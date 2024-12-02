@@ -8,12 +8,12 @@ const InputView = {
   }),
 
   async readDate() {
-    const input = await Console.readLineAsync(this.InputView.DATE_QUESTION);
+    const input = await Console.readLineAsync(this.INPUT_MESSAGE.DATE_QUESTION);
     return input;
   },
 
   async readMenu() {
-    const input = await Console.readLineAsync(this.InputView.MENU_QUESTION);
+    const input = await Console.readLineAsync(this.INPUT_MESSAGE.MENU_QUESTION);
     return input;
   },
 };
