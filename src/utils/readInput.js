@@ -1,6 +1,6 @@
 import InputView from '../view/InputView.js';
 import OutputView from '../view/OutputView.js';
-import { validateDateInput } from './validate.js';
+import { validateDateInput, validateMenuInput } from './validate.js';
 
 const recursionInput = async (readInput, validationFn) => {
   try {
@@ -15,3 +15,6 @@ const recursionInput = async (readInput, validationFn) => {
 
 export const readAndValidateDate = () =>
   recursionInput(() => InputView.readDate(), validateDateInput);
+
+export const readAndValidateMenu = () =>
+  recursionInput(() => InputView.readMenu(), validateMenuInput);
