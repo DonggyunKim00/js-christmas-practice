@@ -1,5 +1,3 @@
-import Menu from './Menu';
-
 class MenuList {
   #list;
 
@@ -18,9 +16,12 @@ class MenuList {
     }, 0);
   }
 
-  getGivingItem() {
-    if (this.getTotalAmount() > 120000) return Menu.create('샴페인');
-    return null;
+  getMenuCountWithCategory(category) {
+    return this.#list.reduce((acc, cur) => {
+      const { menu, quantity } = cur;
+      if (menu.getInfo().category === category) return acc + quantity;
+      return acc;
+    }, 0);
   }
 }
 
